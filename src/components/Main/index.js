@@ -62,8 +62,6 @@ const GoogleMapComp = () => {
         });
     }
 
-    console.log(process.env);
-    console.log(process.env.REACT_APP_GOOGLE_MAPS_API_KEY);
     const { isLoaded: isMapLoaded } = useLoadScript({
         googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY
     })
