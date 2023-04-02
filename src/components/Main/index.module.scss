@@ -1,0 +1,46 @@
+@import '../../styles/mixins/flex.scss';
+@import '../../styles/mixins/media.scss';
+@import '../../styles/variables/colors.scss';
+
+
+.mainContainer {
+    width: 100vw;
+    padding-bottom: 40px;
+    @include flexCenter(column);
+}
+
+.mapContainer {
+    width: 100vw;
+    height: 100vw;
+}
+
+.invisible {
+    display: none;
+}
+
+.captureButton {
+    margin: 40px;
+    padding: 5px 20px;
+    background-color: $buttonColor;
+    border-radius: 5px;
+    color: $primaryColor;
+    font-weight: 500;
+    border: none;
+    
+    &:hover {
+        cursor: pointer;
+        background-color: $buttonHoverColor;
+    }
+}
+
+@include screen (surfaceDuo) {
+    .mainContainer {
+        padding: 40px;
+    }
+    
+    .mapContainer {
+        width: 500px;
+        height: 500px;
+        border-radius: 20px;
+    }
+}

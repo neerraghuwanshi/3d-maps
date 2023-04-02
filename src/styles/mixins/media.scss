@@ -1,0 +1,11 @@
+$levels: (
+    surfaceDuo: 540px,
+);
+
+
+@mixin screen ($level) {
+    $ScreenWidth: map-get($levels, $level);
+    @media only screen and (min-width: $ScreenWidth) {
+        @content;
+    }
+}

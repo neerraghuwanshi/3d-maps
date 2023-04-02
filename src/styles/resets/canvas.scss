@@ -1,0 +1,17 @@
+@import '../mixins/media.scss';
+@import '../variables/colors.scss';
+
+canvas {
+    outline: none;
+    -webkit-tap-highlight-color: $primaryColor;
+    width: 100vw !important;
+    height: 100vw !important;
+}
+
+
+@include screen (surfaceDuo) {
+    canvas {
+        width: 500px !important;
+        height: 500px !important;
+    }
+}
