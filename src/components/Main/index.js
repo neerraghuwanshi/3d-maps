@@ -49,12 +49,11 @@ const GoogleMapComp = () => {
     // Taking a snapshot of the map as a Data URL
     const onClickHandler = async () => {
         const map = document.getElementsByClassName(styles.mapContainer)[0]
-        htmlToImage.toPng(map, {
+        htmlToImage.toJpeg(map, {
             skipFonts: true,
             includeQueryParams: true,
-            style: {
-                borderRadius: 0,
-            },
+            cacheBust: true,
+            style: { borderRadius: 0 },
             filter: filterElements,
         })
         .then(function (dataUrl) {
